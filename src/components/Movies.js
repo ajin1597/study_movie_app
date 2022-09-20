@@ -1,66 +1,56 @@
-import React from "react";
-import Movie from "./Movie";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import MoviesAPI from "./MoviesAPI";
 
-const movies = [
-  {
-    id: 1,
-    영화명: "탑건",
-    주연배우: "톰크루즈",
-    장르: "비행",
-    상영시간: ["10.00", "12.00", "15.00", { time: "1234" }],
-    티켓가격: 15000,
-  },
-  {
-    id: 2,
-    영화명: "수리남",
-    주연배우: "황정민",
-    장르: "마약",
-    //티켓가격: 15000,
-  },
-  {
-    id: 3,
-    영화명: "스파이더맨",
-    주연배우: "톰홀렌드",
-    장르: "액션",
-    상영시간: ["10.30", "12.30", "15.30"],
-    티켓가격: 14000,
-  },
-];
+function Movies(props) {
+  console.log(props);
+  const [loading, setLoading] = useState(true);
+  const [movies, setMovies] = useState([]);
 
-function Movies() {
+  async function getMovieAPI() {
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+    if (!props.apiPath) return;
+    console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
+    const result = await axios.get(
+      `https://api.themoviedb.org/3/movie/${props.apiPath}?api_key=bb2fc28576857cba9e37eb36ae858d15&language=ko&page=1&region=kr`
+    );
+    setMovies(result.data.results);
+  }
+
+  useEffect(
+    function () {
+      getMovieAPI();
+    },
+    [props.apiPath]
+  );
+
+  setTimeout(function () {
+    setLoading(false);
+  }, 500);
+
   return (
     <>
-      <h1>강석원 - 영화앱</h1>
-      {movies.map(function (movie) {
-        return (
-          <div key={movie.id}>
-            <Movie
-              movieName={movie.영화명}
-              actor={movie.주연배우}
-              genre={movie.장르}
-              time={movie.상영시간}
-              price={movie.티켓가격}
-            />
-
-            <hr />
-          </div>
-        );
-      })}
-      <Movie
-        movieName={"어린신부"}
-        actor={"문근영"}
-        genre={"드라마"}
-        time={[]}
-        price={5000}
-      />
-      <hr />
-      <Movie
-        movieName={"늙은신부"}
-        actor={"문근영"}
-        genre={"드라마"}
-        time={[]}
-        price={5000}
-      />
+      {loading ? (
+        <div>로딩중</div>
+      ) : (
+        <>
+          {movies.map(function (ele, idx) {
+            return (
+              <MoviesAPI
+                key={ele.id}
+                id={ele.id}
+                title={ele.title}
+                backdrop_path={ele.backdrop_path}
+                overview={ele.overview}
+                vote_average={ele.vote_average}
+                adult={ele.adult}
+                original_language={ele.original_language}
+                release_date={ele.release_date}
+              />
+            );
+          })}
+        </>
+      )}
     </>
   );
 }

@@ -26,7 +26,7 @@ function ClickCounter(props) {
   return (
     <>
       <div className="container">
-        <h2>{props.title ? props.title : "이름없음"}</h2>
+        <h2>{props.title ? props.title : "스톱워치"}</h2>
         <hr />
         {/* <div>timerId : {timerId}</div> */}
         <div>Count : {counter}</div>

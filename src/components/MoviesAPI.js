@@ -33,7 +33,7 @@ function MoviesAPI(props) {
 MoviesAPI.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  backdrop_path: PropTypes.string.isRequired,
+  backdrop_path: PropTypes.string,
   overview: PropTypes.string.isRequired,
   vote_average: PropTypes.number.isRequired,
   adult: PropTypes.bool,
