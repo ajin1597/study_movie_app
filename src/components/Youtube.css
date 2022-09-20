@@ -1,3 +1,44 @@
-.youtv {
-  background: red;
+.yt__top {
+  background: rgb(48, 48, 48);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.yt__top_left {
+  /* background-color: blue; */
+  margin-left: 50px;
+}
+
+.yt__top_right {
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.yt__top_right_lte {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.yt__mid {
+  background-color: rgb(48, 48, 48);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: white;
+}
+
+.yt__mid_left {
+  margin-left: 10px;
+}
+
+.yt__mid_right {
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
 }
