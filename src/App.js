@@ -5,13 +5,21 @@ import Movies from "./components/Movies";
 import ClickCounter from "./components/ClickCounter";
 import Menu from "./components/Menu";
 import Youtube from "./components/Youtube";
+import Tailwind from "./components/Tailwind";
+import KakaoTalk from "./components/KakaoTalk";
 
 function Home() {
   return <h2>홈 컴포넌트</h2>;
 }
 
 function About() {
-  return <h2>개발자소개</h2>;
+  return (
+    <h2>
+      개발자소개
+      <br />
+      항상 배고파
+    </h2>
+  );
 }
 
 function App(props) {
@@ -31,9 +39,6 @@ function App(props) {
       <div>
         <nav>
           <ul>
-            <li>
-              <Link to="/ClickCounter">카운터</Link>
-            </li>
             <li>
               <Link to="/">
                 <svg
@@ -55,6 +60,9 @@ function App(props) {
               </Link>
             </li>
             <li>
+              <Link to="/ClickCounter">카운터</Link>
+            </li>
+            <li>
               <Link to="/popular">인기영화</Link>
             </li>
             <li>
@@ -69,6 +77,12 @@ function App(props) {
             <li>
               <Link to="/Youtube">유튜브</Link>
             </li>
+            <li>
+              <Link to="/Tailwind">Tailwind</Link>
+            </li>
+            <li>
+              <Link to="/Kakaotalk">KakaoTalk</Link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -81,6 +95,8 @@ function App(props) {
         <Route path="/upcoming" element={<Movies apiPath="upcoming" />} />
         <Route path="/now_playing" element={<Movies apiPath="now_playing" />} />
         <Route path="/Youtube" element={<Youtube />} />
+        <Route path="/Tailwind" element={<Tailwind />} />
+        <Route path="/Kakaotalk" element={<KakaoTalk />} />
       </Routes>
     </HashRouter>
   );
