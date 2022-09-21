@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Movies from "./components/Movies";
 import ClickCounter from "./components/ClickCounter";
 import Menu from "./components/Menu";
@@ -16,7 +16,7 @@ function About() {
 
 function App(props) {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* <div>
         <div>
           <Link to="/">홈으로</Link>
@@ -82,7 +82,7 @@ function App(props) {
         <Route path="/now_playing" element={<Movies apiPath="now_playing" />} />
         <Route path="/Youtube" element={<Youtube />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

@@ -1,8 +1,11 @@
 import "./Youtube.css";
+import { IoCompassOutline } from "react-icons/io5";
+import { BsCollectionPlay } from "react-icons/bs";
+import { AiOutlineHome } from "react-icons/ai";
 
 function Youtube() {
   return (
-    <>
+    <div className="yt__allInterPace">
       <div className="yt__top">
         <div className="yt__top_left">
           <span>5:10</span>
@@ -54,8 +57,7 @@ function Youtube() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-6 h-6"
-              width={25}
+              className="w-6 h-6 yt_icon"
             >
               <path
                 fillRule="evenodd"
@@ -66,7 +68,6 @@ function Youtube() {
             Premium
           </span>
         </div>
-
         <div className="yt__mid_right">
           <span>
             <svg
@@ -79,7 +80,6 @@ function Youtube() {
               <path d="M3.25 4A2.25 2.25 0 001 6.25v7.5A2.25 2.25 0 003.25 16h7.5A2.25 2.25 0 0013 13.75v-7.5A2.25 2.25 0 0010.75 4h-7.5zM19 4.75a.75.75 0 00-1.28-.53l-3 3a.75.75 0 00-.22.53v4.5c0 .199.079.39.22.53l3 3a.75.75 0 001.28-.53V4.75z" />
             </svg>
           </span>
-
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -111,10 +111,162 @@ function Youtube() {
               />
             </svg>
           </span>
-          <span>석원</span>
+          <span className="yt_profile">석원</span>
         </div>
       </div>
-    </>
+      {/*위에서 두번째*/}
+
+      <div className="yt__mid2">
+        <div className="yt__mid2_left">
+          <div className="yt__compass">
+            <IoCompassOutline />
+          </div>
+          <span>탐색</span>
+        </div>
+
+        <div className="yt__mid2_right">
+          <span>전체</span>
+          <span>새로운 맞춤 동영상</span>
+          <span>실시간</span>
+          <span>음악</span>
+        </div>
+      </div>
+      {/* {탐색 부분} */}
+
+      <div className="yt__video">
+        <img
+          src="https://i.ytimg.com/an_webp/NbJiY-gmAdQ/mqdefault_6s.webp?du=3000&sqp=COySqpkG&rs=AOn4CLCpjYrT_A6HNx_P-t5HnoGZKReYpQ"
+          className="yt__video_img"
+        ></img>
+
+        <div className="yt__video_subText">
+          <img
+            className="yt__video_profile"
+            src="https://yt3.ggpht.com/JKJa9vaTqiTzSTYtQxY8LWYWZN0TNaTqNRVSZjN72uqeNxvK5-9QAO8GMP65EmzBruGxiPuSFLA=s68-c-k-c0x00ffffff-no-rj"
+          ></img>
+          <div className="yt__video_text">
+            <div className="yt__video_text_highLight">
+              평범할 수 없는 시대를 평범하게 살고 싶던 사람들
+              [한국영화/결말포함]
+            </div>
+            <div className="yt__video_text_sub">
+              영화참구생활 · 조회수 38만회 · 6일 전
+            </div>
+          </div>
+
+          <div className="yt__video_option">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+              width={25}
+              color={"white"}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      {/* {영상부분} */}
+
+      <div className="yt__shorts"></div>
+      {/* { shorts부분  } */}
+
+      <div className="yt__bottom">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+            width={42}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+            />
+          </svg>
+          <div className="text_home">홈</div>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
+            />
+          </svg>
+          <span>Shorts</span>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+            width={80}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+
+        <div>
+          <div className="yt__subscribe">
+            <BsCollectionPlay />
+          </div>
+          <div className="text_subscrine">구독</div>
+        </div>
+
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
+            />
+          </svg>
+          <span>보관함</span>
+        </div>
+      </div>
+      {/* {마지막 선책부분} */}
+    </div>
   );
 }
 
