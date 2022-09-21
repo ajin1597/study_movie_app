@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/study_movie_app/static/css/main.ebe0ba89.css",
+    "main.js": "/study_movie_app/static/js/main.3f571b9b.js",
+    "index.html": "/study_movie_app/index.html",
+    "main.ebe0ba89.css.map": "/study_movie_app/static/css/main.ebe0ba89.css.map",
+    "main.3f571b9b.js.map": "/study_movie_app/static/js/main.3f571b9b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ebe0ba89.css",
+    "static/js/main.3f571b9b.js"
+  ]
+}
