@@ -41,6 +41,12 @@ function Menu() {
           <li>
             <Link to="/about">About us</Link>
           </li>
+          <li>
+            <div className="text-white">
+              <input id="toggle_dark" type="checkbox" checked={true}></input>
+              <label for="toggle_dark">다크모드</label>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>

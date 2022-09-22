@@ -7,6 +7,7 @@ import Menu from "./components/Menu";
 import Youtube from "./components/Youtube";
 import Tailwind from "./components/Tailwind";
 import KakaoTalk from "./components/KakaoTalk";
+import Timer from "./components/Timer";
 
 function Home() {
   return <h2>홈 컴포넌트</h2>;
@@ -23,6 +24,20 @@ function About() {
 }
 
 function App(props) {
+  const [darkMode, setdarkMode] = useState(false);
+
+  function toggle() {
+    setdarkMode(!darkMode);
+
+    if (!darkMode) {
+      console.log("on");
+      document.querySelector("body").classList.add("dark");
+    } else {
+      console.log("off");
+      document.querySelector("body").classList.remove("dark");
+    }
+  }
+
   return (
     <HashRouter>
       {/* <div>
@@ -83,6 +98,15 @@ function App(props) {
             <li>
               <Link to="/Kakaotalk">KakaoTalk</Link>
             </li>
+            <div className="text-white">
+              <input
+                id="toggle_dark"
+                type="checkbox"
+                checked={darkMode}
+                onChange={toggle}
+              ></input>
+              <label htmlFor="toggle_dark">다크모드</label>
+            </div>
           </ul>
         </nav>
       </div>
